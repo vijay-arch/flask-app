@@ -14,18 +14,18 @@ spec:
     metadata:
       labels:
         app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: vijayk2/frontend:v1
 
-    containers:
-    - name: frontend
-      image: vijayk2/frontend:v1
+        ports:
+        - containerPort: 80
 
-    ports:
-    - containerPort: 80
-
-    resources:
-      requests:
-        memory: "128Mi"
-        cpu: "100m"
-      limits:
-        memory: "256Mi"
-        cpu: "500m"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
